@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/report.css">
+    <script src="lib/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="lib/bootstrap/js/bootstrap.min.js"></script> 
+	</head>
+  <body>
+  <!-- Top Nav-bar -->
+  <nav class="navbar navbar-default">
+  <div class="container-fluid">
+      <div class="navbar-header">
+      <a class="navbar-img" href="http://www.agrostar.in/"><img src="img/agrostar.png"></a>
+      </div>
+      <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="#">Reporting</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+              <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true" >Prashant Wagh<i class="fa fa-user-circle fa-2x pull-right"; ;></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">LogOut</a></li>
+            </ul>
+           </li>
+          </ul>
+      </div>
+  </div>
+  </nav>
+  <div class="container">
+   <div class="row">
+   <!-- side bar -->
+    <div class="col-sm-3">
+      <div class="sidebar-nav">
+        <div class="navbar navbar-default" role="navigation">
+          <div class="navbar-collapse collapse sidebar-navbar-collapse">
+            <ul class="nav navbar-nav">
+              <li><a href="#">LMD Profile</a></li>
+              <li><a href="#">LMD Report</a></li>
+              <li><a href="file:///home/ubuntu/Project/src/app/reportlist.html#">Report List</a></li>
+              <li><a href="#">LMD </a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- report downloads -->
+    <div class="col-sm-7">
+      <div class="panel panel-default">
+        <div class="panel-heading"><span class="lead">LMD of Report</span></div>
+          <div class=report-list>
+            <h5>Report:-
+            <select id="selected-report"  class="selectpicker">
+            </select> 
+            </h5>
+          </div>
+          <div class="showUrl">
+            <button id="btn-info" type="button" class="btn btn-info">Show  Url</button>
+          </div>
+          <div class="reportdownloads">
+            <a href="" id="mya" style="" class="btn btn-success">Download</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="script/app.js"></script>
+  <footer></footer>
+  </body>
+</html>

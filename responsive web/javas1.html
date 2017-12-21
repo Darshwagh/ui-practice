@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		function addtoend()
+		{
+			var parent=document.createElement("h3");
+			var child=document.createTextNode("He is paresh");
+			parent.appendChild(child);
+			document.getElementById("main").appendChild(parent);
+		}
+		function addbefore()
+		{
+			var parent=document.createElement("h3");
+			var child=document.createTextNode("He is shiry");
+			parent.appendChild(child);
+			 var boss=document.getElementById("main");
+			 boss.insertBefore(parent,p2);
+		}
+		function remove()
+		{
+			var parent=document.getElementById("main");
+			var child=document.getElementById("p2");
+			parent.removeChild(child);
+		}
+		function replace()
+		{
+			var parent=document.createElement("p");
+			var child=document.createTextNode("This is sapna");
+			parent.appendChild(child);
+			var boss=document.getElementById("main");
+			var child2=document.getElementById("p2");
+			boss.replaceChild(parent,child2);
+
+		}
+	</script>
+
+</head>
+<body>
+<h1>I am Prashant</h1>
+<div id="main">
+	<p id="p1">He is mahesh</p>
+	<p id="p2">He is prasad</p>
+</div>
+<button type="button" onclick="addtoend()">Add to end</button>
+<button type="button" onclick="addbefore()">Add Before</button>
+<button type="button" onclick="remove()">Remove</button>
+<button type="button" onclick="replace()">Replace</button>
+</body>
+</html>

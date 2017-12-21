@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link href="drop.css" rel="stylesheet" type="text/css">
+	<script type="text/javascript">
+	var i=1;
+		function dropin()
+		{
+			if(i=1)
+			{
+				document.getElementById("sub").className="show";
+				i=2;
+			}
+
+		}
+		function dropout()
+		{
+			if(i=2)
+			{
+				document.getElementById("sub").className="hide"; 
+				i=1;
+			}
+		}
+	</script>
+</head>
+<body>
+	<div id="nav">
+		<div id="Home"><h3>Home</h3></div>
+		<div id="Services" onclick="dropin()" onclick="dropout()"><h3>Services</h3></div>
+			<div id="sub" class="hide">
+				<ul>
+					<li>Computer Sale</li><hr>
+					<li>Computer Repair</li><hr>
+					<li>Hardware</li><hr>
+					<li>Software</li><hr>
+				</ul>
+			</div>
+		<div id="AboutUs"><h3>About Us</h3></div>
+	</div>
+</body>
+</html>

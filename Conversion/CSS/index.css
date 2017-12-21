@@ -1,0 +1,338 @@
+*
+{
+	margin: 0;
+	padding: 0;
+}
+#main
+{
+	width: 775px;
+	height: 870px;
+	background-color: #100c09;
+	margin:0 auto;
+}
+#nav
+{
+	width: 775px;
+	height: 49px;
+	background:url(../images/background/menu.png) repeat-x left top;
+}
+#nav ul
+{
+	list-style-type: none;
+	text-align: center;
+	
+
+}
+#nav ul li
+{
+	display: inline-block;
+	line-height: 50px;
+	font-family:Myriad "Myriad Pro";
+	font-size:11px;
+	color:#d2c9af;	
+	text-decoration:none;
+	padding-left: 37px;
+	padding-right: 37px;
+}
+header
+{
+	padding-left: 65px;
+	padding-right: 65px;
+	height:181px;
+	margin: 0 auto;
+	background:url(../images/background/BackgroundEffect.png);
+}
+header h1
+{   
+	margin-left: 20px;
+	height: 56px;
+	text-indent:-9999px;
+	background:url(../images/background/Logo.png)no-repeat left center;
+	position: relative;
+	top: 54px;
+	left: 0px;
+}
+header img
+{
+	width: 349px;
+	height: 252px;
+	position: relative;
+	left: 299px;
+	top: -65px;
+
+}
+#white
+{
+	width: 636px;
+	height: 382px;
+	background-color:#ffffff;
+	margin-left:65px;
+	border-radius: 5px;
+	position: absolute;
+	padding: 10px;
+}
+.a
+{
+	width: 210px;
+	height: 163px;
+	background-color: #EEE;
+	float: left;
+	text-align: center;
+}
+.a img
+{
+	margin-top: 15px;
+}
+.a h2
+{
+	font-size: 14px;
+	font-family:Myriad "Myriad Pro";
+	color: #100c09;
+	margin-top: 10px;
+}
+.a p
+{
+	font-family: Tahoma Regular;
+	font-size: 10px;
+	color: #ae6125;
+	margin-top: 8px;
+	width: 164px;
+	margin-left: 15px;
+}
+.a button
+{
+	width: 
+	margin-top: 14px;
+	color: #7a6154;
+	font-family: Tahoma Regular;
+	font-size: 15px;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	background-color: #f2ecdb;
+}
+#welcome
+{
+	width: 299px;
+	height: 220px;
+	float: left;
+	/*background-color: red;*/
+	padding-left: 22px;
+}
+#welcome hgroup h2
+{
+	margin-top: 26px;
+	font-size: 18px;
+	font-family: Myriad "Myriad Pro";
+	color: #424242;
+}
+#welcome hgroup h2 span
+{
+	color: #f1c99c;
+}
+#welcome hgroup h3
+{
+	font-family: Myriad "Myriad Pro";
+	color: #7b7b7b;
+	font-size: 10px;
+	opacity: 0.5;
+}
+#welcome img
+{
+	float: left;
+	margin-top: 19px;
+	margin-bottom: 14px;
+}
+#right
+{
+	width: 145px;
+	height: 66px;
+	float: left;
+	font-size: 10px;
+	font-family: Tahoma Regular;;
+	margin-left: 20px;
+	margin-top: 19px;
+	margin-right: 26px;
+	margin-bottom: 14px;
+	color: #848484;
+}
+#right span
+{
+	font-size: 11px;
+	font-family: Trebuchat MS BOLD;
+	color: #ae6125;
+}
+#welcome ul
+{
+	margin-top: 14px;
+	list-style-position:inside;
+	list-style-image:url(../images/background/ArrowBullet.png);
+	font-family:Tahoma, Geneva, sans-serif;
+	font-size:10px;
+	color:#b2ab94;
+	text-decoration:underline;	
+}
+#welcome ul li
+{
+	margin-top: 12px;
+}
+#news
+{
+	width: 291px;
+	height: 220px;
+	float: left;
+	padding-left: 22px;
+}
+#news hgroup h2
+{
+	margin-top: 26px;
+	font-size: 18px;
+	font-family: Myriad "Myriad Pro";
+	color: #424242;
+}
+#news hgroup h2 span
+{
+	color: #f1c99c;
+}
+#news hgroup h3
+{
+	font-family: Myriad "Myriad Pro";
+	color: #7b7b7b;
+	font-size: 10px;
+	opacity: 0.5;
+}
+#news h4
+{
+	background:url(../images/background/CalenderIcon.png) no-repeat left top;
+	margin-top: 33px;
+	padding-left:30px;
+	font-family: Trebuchat MS BOLD;
+	font-size: 13px;
+	color:#ae6125;	
+}
+#news p
+{
+	font-family: Tahoma Regular;
+	font-size: 10px;
+	color: #b2ab94;
+	text-decoration: underline;
+}
+#black
+{
+	width: 656px;
+	height: 176px;
+	background-color:#302621;
+	position: relative;
+	top: 402px;
+	left: 65px;
+
+}
+#blackleft
+{
+	
+	width: 272px;
+	height: 151px;
+	float: left;
+	padding-top: 27px;
+	padding-left: 35px;
+	
+}
+.sectionblacktext
+{
+	position: relative;
+	top: -50px;
+	left: 70px;
+}
+.sectionblacktext h2
+{
+	font-size: 18px;
+	color: #d2c9af;
+	font-family: Myriad Pro Regular;
+}
+.sectionblacktext h3
+{
+	font-size: 10px;
+	color: #d2c9af;
+	font-family: Myriad Pro Regular;
+}
+#blackleft p
+{
+	font-family: Tahoma Regular;
+	font-size: 10px;
+	color: #100c09;
+	margin-top: -30px;
+}
+#blackleft p span
+{
+	font-family: Trebuchat MS Bold;
+	font-size: 11px;
+	color: #100c09;
+}
+#blackleft a
+{
+	text-decoration:none;
+	color:#FFF;
+	font-family:Tahoma, Geneva, sans-serif;	
+	font-size:10px;
+	padding-left:15px;
+	padding-right:15px;
+	padding-top:1px;
+	padding-bottom:4px;
+	border-radius:5px;
+	background-color:#f2a60a;
+	margin-left:178px;
+}
+#blackright
+{
+	
+	width: 272px;
+	height: 151px;
+	float: left;
+	padding-top: 27px;
+	padding-left: 35px;
+}
+#service1
+{
+	font-family: Trebuchat MS Bold;
+	font-size: 11px;
+	color: #b2ab94;
+	margin-top: -30px;
+}
+#service2
+{
+	font-family: Tahoma Regular;
+	font-size: 10px;
+	color: #b2ab94;
+	text-decoration: underline;
+	margin-top: 17px;
+}
+
+#footer
+{
+	width: 646px;
+	position: relative;
+	top: 400px;
+	left: 65px;
+	
+
+}
+#footer ul
+{
+	list-style-type: none;
+	text-align: center;
+	padding: 5px;
+}
+#footer ul li
+{
+	font-size: 11px;
+	display: inline;
+	color: #b3ab94;
+	padding:5px; 
+}
+#footer p
+{
+	font-size: 10px;
+	text-align: center;
+	
+	color: #b3ab94;
+}
+

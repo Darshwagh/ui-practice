@@ -1,0 +1,8 @@
+.paginationclass{
+    
+margin: 19px 28px;    
+}
+.paginationclass span{
+    margin-left:15px;
+    display:inline-block;
+}

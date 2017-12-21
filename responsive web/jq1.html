@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>\</title>
+	<script src="jquery-2.1.4.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#div1").mouseenter(function(){
+				$("#div1").fadeTo("fast",1)
+			});
+		});
+		
+	</script>
+	<style type="text/css">
+		.div
+		{
+			opacity: 0.4;
+		}
+	</style>
+</head>
+<body>
+<div id="div1" class="div" style="width: 100px;height: 100px;background-color: red;"></div> <br>
+<div id="div2" class="div" style="width: 100px;height: 100px;background-color: green;"></div> <br>
+<div id="div3" class="div" style="width: 100px;height: 100px;background-color: blue;"></div>
+</body>
+</html>

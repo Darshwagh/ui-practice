@@ -1,0 +1,132 @@
+<!doctype html>
+<html ng-app ="myModule">
+  <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+      <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
+      <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+      <link rel="stylesheet" href="css/report.css">
+      <script src="lib/jquery/dist/jquery.min.js"></script>
+      <script type="text/javascript" src="lib/bootstrap/js/bootstrap.min.js"></script> 
+      <script src="lib/angular/angular.min.js"></script>
+      <script src="script/script.js"></script>
+  </head>
+  <body>
+  <!-- Top Nav-bar -->
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-img" href="http://www.agrostar.in/"><img src="img/agrostar.png"></a>
+      </div>
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="#">Reporting</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true" >Prashant Wagh<i class="fa fa-user-circle fa-2x pull-right"; ;></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">LogOut</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+   <div class="row">
+    <!-- side bar -->
+    <div class="col-sm-3">
+      <div class="sidebar-nav">
+        <div class="navbar navbar-default" role="navigation">
+          <div class="navbar-collapse collapse sidebar-navbar-collapse">
+            <ul class="nav navbar-nav">
+              <li><a href="#">LMD Profile</a></li>
+              <li><a href="file:///home/ubuntu/Project/src/app/index.html">LMD Report</a></li>
+              <li><a href="#">Report List</a></li>
+              <li><a href="#">LMD </a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+   </div>
+   <!-- report list in table -->
+  <div class="col-sm-9">
+   <div ng-controller="myController" class="table-responsive">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Report No</th>
+          <th>Report Name</th>
+          <th> Report URL</th>
+          <th> Edit</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="report in reports">
+          <td>{{report.no}}</td>
+          <td>{{report.reportname}}</td>
+          <td>{{report.url}}</td>
+          <td ng-show="!rowform.$visible"><button id="editreport" data-toggle="modal" data-target="#editModal" ng-click="rowform.$show()">Edit</button>
+          </td> 
+        </tr>
+      </tbody>
+    </table>
+     <!-- edit report modal -->
+    <div class="modal fade" id="editModal" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3>Edit Report</h3>
+          </div>
+          <form class="form-inline" ng-submit="edit()" name="myForm">
+            <div class="modal-body">
+              <div class="form-group">
+                <input type="text" ng-model="reportname" placeholder="Name" class="form-control" required/> 
+              </div>
+              <div class="form-group">  
+                <input type="url" ng-model="reporturl" placeholder="Url" class="form-control" required/>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button class="btn" type="submit">Save</button>
+              <button class="btn" data-dismiss="modal" type="close">cancel</button>
+            </div>
+          </form> 
+        </div> 
+      </div>
+    </div>
+       <!-- edit report modal end -->
+    <button id="addreport" data-toggle="modal" data-target="#createModal">Add Report</button>
+    <!-- add report modal -->
+    <div class="modal fade" id="createModal" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3>Create Report</h3>
+          </div>
+          <form class="form-inline" ng-submit="submit()" name="myForm">
+            <div class="modal-body">
+              <div class="form-group">
+                <input type="text" ng-model="reportname" placeholder="Name" class="form-control" required/>
+              </div>
+              <div class="form-group">  
+                <input type="url" ng-model="url" placeholder="Url" class="form-control" required/>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button class="btn" type="submit">Save</button>
+              <button class="btn" data-dismiss="modal" type="close">cancel</button>
+            </div>
+          </form> 
+        </div> 
+      </div>
+    </div>
+     <!-- add report modal end -->
+  </div>
+    <div class="col-sm-3">
+    </div>
+  </div>
+  <!-- <footer></footer> -->
+  </body>
+</html>

@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>support to farmer</title>
+  <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+      <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="lib/jquery-ui/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="lib/jquery/dist/jquery.js"></script>
+  <script src="lib/jquery-ui/jquery-ui.js"></script>
+  <script src="lib/angular/angular.min.js"></script>
+  <script type="text/javascript" src="lib/bootstrap/js/bootstrap.min.js"></script> 
+  <link rel="stylesheet" href="css/record.css">
+  <script>
+  $( function() {
+    $( "#tabs" ).tabs({
+    });
+  } );
+  </script>
+</head>
+<body ng-app="myModule">
+ <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-img" href="http://www.agrostar.in/"><img src="img/agrostar.png"></a>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+           
+            <li><h5>Customer Complaint Portal</h5></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true" >Prashant Wagh<i class="fa fa-user-circle fa-2x pull-right"; ;></i></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">LogOut</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container" >
+      <div id="tabs" ng-controller="myController">
+        <ul>
+          <li><a href="#tabs-1">Pending Quiries</a></li>
+          <!-- <li><a href="#tabs-2" >Addressed Quiries</a></li> -->
+        </ul>
+      <div id="tabs-1">
+      <div class="panel panel-default">  
+        <div class="panel-heading">
+          <span class="lead">List of Records </span></div>
+        <div class="tablecontainer">
+          <table class="table table-hover" id="table">
+            <thead>
+              <tr>
+                <th>Sr.No</th>
+                <th>Phone No.</th>
+                <th>Call Time</th>
+                 <th>Call For</th>
+                <!-- <th>Recording</th> -->
+                <th>Call</th>
+                <th>Call Addressed</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr ng-repeat="recording in recordings">
+                <td>{{recording.uniqueid}}</td>
+              <td>{{recording.caller_id}}</td>
+              <td>{{recording.start_time| date:'yyyy-mm-dd hh:mm:ss Z'}}</td>
+              <td>{{recording.comment_b}}</td>
+                <!-- <td>
+                  <audio  controls>
+                    <source src="http://www.w3schools.com/html/horse.ogg" type="audio/ogg" />
+                    <source src="http://www.w3schools.com/html/horse.mp3" type="audio/mpeg" />
+                    <!-- <a href="http://www.w3schools.com/html/horse.mp3">horse</a> -->
+                  <!-- </audio> -->
+                <!-- </td> -->
+                <td>
+                  <button type="button" ng-click="myFunc(recording.caller_id)"><a><i class="fa fa-phone" aria-hidden="true"></i></a></button>
+                 <!--  <button type="button"><a href="http://192.168.2.61/asterisk/curl.php?value={{recording.caller_id}}" target="_blank"><i class="fa fa-phone" aria-hidden="true"></i></a></button> -->
+                  <!-- <button href="http://192.168.2.61/asterisk/curl.php?value={{recording.caller_id}}" id="btn1" class="btn"><i class="fa fa-phone" aria-hidden="true"></i></button> -->
+                </td>
+                <td>
+                  <button type="button" id="btndone"  class="btn btn1-success" >Done</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      </div>
+    <!-- <div id="tabs-2">
+      <div class="panel panel-default">        
+      <div class="panel-heading">
+      <span class="lead">History </span></div>
+      <div class="tablecontainer">
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th ng-click="sortData('Sr.No')">Sr.No<div ng-class="getSortClass('Sr.No')"></div></th>
+              <th>Caller Id</th>
+              <th ng-click="sortData('date')">Sr.No<div ng-class="getSortClass('date')"></div></th>
+              <th>Call For</th>
+              <th>Menu</th>
+              <th>Sub Menu</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="recording in recordings | orderBy:sortColumn:reverseSort">
+              <td>{{recording.uniqueid}}</td>
+              <td>{{recording.caller_id}}</td>
+              <td>{{recording.start_time| date:'yyyy-MM-dd HH:mm:ss Z'}}</td>
+              <td>{{recording.comment_b}}</td>
+              <td>{{recording.comment_d}}</td>
+             <td>{{recording.comment_e}}</td>
+            </tr>
+          </tbody>
+        </table>  
+      </div>
+      </div>
+      </div>
+  </div> -->
+  </div>
+ </div>
+ <script type="text/javascript" src="script/record.js"></script>
+</body>
+</html>

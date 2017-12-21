@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="CSS/bootstrap.css">
+	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="CSS/login.css">
+	<script type="text/javascript" src="JavaScript/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="JavaScript/bootstrap.js"></script>
+</head>
+<body>
+	<div class="container">
+		<!-- <div class="col-md-12 row headnav">
+			<div class="loginmain">
+				<nav class="loginnav">
+					<img src="Images/Background/agrostar.png">
+				<ul>
+					<li>Support</li>
+				</ul>
+				</nav>
+			</div>	
+		</div>	 -->
+		<div class="col-md-12 row main">
+			<form action="#">
+				<table class="table-striped">
+					<tr>
+						<td colspan="2">
+						<label for="vehical_no">Vehical No:</label><br>
+						<input type="text" name="Vehical_No" id="vehical_no" placeholder="Enter Vehical No" required/>
+						</td>
+						<!-- <td>
+						<label for="username">User Name*:</label><br>
+						<input type="text" name="UserName" id="username" placeholder="Enter User Name" required/>
+						</td> -->
+						<td colspan="2">
+						<label for="class">Class:</label><br>
+						<input type="text" name="Class" id="class" placeholder="Enter Class" required/>
+						</td>
+						<!-- <td>
+						<label for="username">User Name*:</label><br>
+						<input type="text" name="UserName" id="username" placeholder="Enter User Name" required/>
+						</td> -->
+					</tr>
+					<tr>
+						<td>
+						<label for="ownerfname">Owner First Name:</label><br>
+						<input type="text" name="OwnerfName" id="ownerfname" placeholder="Enter Owner First Name" required/>
+						</td>
+						<td>
+						<label for="ownermname">Owner Middle Name:</label><br>
+						<input type="text" name="OwnermName" id="ownermname" placeholder="Enter Owner Middle Name" required/>
+						</td>
+						<td>
+						<label for="ownerlname">Owner Last Name:</label><br>
+						<input type="text" name="OwnerlName" id="ownerlname" placeholder="Enter Owner Last Name" required/>
+						</td>
+						<td>
+						<label for="birthdate">Birth Date:</label><br>
+						<input type="date" name="BirthDate" id="birthdate" placeholder="Enter Birth Date" required/>
+						</td>
+					</tr>
+					<tr>
+						<td rowspan="3">
+						<label for="address">Address:</label><br>
+						<textarea rows="4" cols="20" name="comment" form="usrform"></textarea>
+						</td>
+						<td>
+						<label for="mobile_no">Mobile No:</label><br>
+						<input type="text" name="MobileNo" id="mobile_no" placeholder="Enter Mobile No" required/>
+						</td>
+						<td>
+						<label for="make">Make:</label><br>
+						<input type="text" name="Make" id="make" placeholder="Enter Make" required/>
+						</td>
+						<td>
+						<label for="regn_date">Regn.Date:</label><br>
+						<input type="date" name="RegnDate" id="regn_date" placeholder="Enter Regn Date" required/>
+						</td>
+					</tr>
+					<tr>
+						<!-- <td>
+						<label for="username">User Name*:</label><br>
+						<input type="text" name="UserName" id="username" placeholder="Enter User Name" required/>
+						</td> -->
+						<td>
+						<label for="model">Model:</label><br>
+						<input type="text" name="Model" id="model" placeholder="Enter Model Name" required/>
+						</td>
+						<td>
+						<label for="engine_no">Engine No:</label><br>
+						<input type="text" name="Engen_No" id="engine_no" placeholder="Enter Engine No" required/>
+						</td>
+						<td>
+						<label for="chasis_no">Chasis No:</label><br>
+						<input type="text" name="Chasis_No" id="chasis_no" placeholder="Enter Chasis No" required/>
+						</td>
+					</tr>
+					<tr>
+						<!-- <td>
+						<label for="username">User Name*:</label><br>
+						<input type="text" name="UserName" id="username" placeholder="Enter User Name" required/>
+						</td> -->
+						<td>
+						<label for="region">Region:</label><br>
+						<input type="text" name="Region" id="region" placeholder="Enter Region" required/>
+						</td>
+						<td>
+						<label for="body_type">Body Type:</label><br>
+						<input type="text" name="BodyType" id="body_type" placeholder="Enter Body Tpe" required/>
+						</td>
+						<td>
+						<label for="setting_capacity">Setting capacity:</label><br>
+						<input type="text" name="SettingCapacity" id="setting_capacity" placeholder="Enter Setting Capacity" required/>
+						</td>
+					</tr>
+					<tr>
+						<td>
+						<label for="c_c">C/C:</label><br>
+						<input type="text" name="C/C" id="c_c" placeholder=" " required/>
+						</td>
+						<td>
+						<label for="rlw">RLW:</label><br>
+						<input type="text" name="RLW" id="rlw" placeholder="Enter RLW" required/>
+						</td>
+						<td>
+						<label for="uw">UW:</label><br>
+						<input type="text" name="UW" id="uw" placeholder="Enter UW" required/>
+						</td>
+						<td>
+						<label for="lc">LC:</label><br>
+						<input type="text" name="LC" id="lc" placeholder="Enter LC" required/>
+						</td>
+					</tr>
+					<tr>
+						<td>
+						<label for="transper_owner">Transper Owner:</label><br>
+						<input type="text" name="TransperOwner" id="transper_owner" placeholder="Enter Transper Owner" required/>
+						</td>
+						<td>
+						<label for="transper_son_of">Transper Son Of:</label><br>
+						<input type="text" name="TransperSonOf" id="transper_son_of" placeholder="Enter Transper Son Of" required/>
+						</td>
+						<td>
+						<label for="username">User Name*:</label><br>
+						<input type="text" name="UserName" id="username" placeholder="Enter User Name" required/>
+						</td>
+						<td>
+						<label for="phone_mobile_no">Phone/Mobile No:</label><br>
+						<input type="text" name="PhoneNo" id="phone_mobile_no" placeholder="Enter Mobile No" required/>
+						</td>
+					</tr>
+					<tr>
+						<td>
+						<label for="tax">Tax:</label><br>
+						<input type="date" name="Tax" id="tax" placeholder="Enter Tax" required/>
+						</td>
+						<td>
+						<label for="tax_from">Tax From:</label><br>
+						<input type="date" name="TaxFrom" id="tax_from" placeholder="Enter Tax From" required/>
+						</td>
+						<td>
+						<label for="username">User Name*:</label><br>
+						<input type="date" name="UserName" id="username" placeholder="Enter User Name" required/>
+						</td>
+						<td>
+						<label for="tax_rec_no">Tax Rec.No:</label><br>
+						<input type="text" name="TaxRec.No" id="tax_rec_no" placeholder="Enter Tax Rec.No" required/>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2">
+						<label for="tax_amount">Tax Amount:</label>
+						<input type="text" name="TaxAmount" id="tax_amount" placeholder="Enter Tax Amount" required/>
+						</td>
+						<td colspan="2">
+						<label for="receipt_date">Receipt Date:</label>
+						<input type="date" name="ReceiptDate" id="receipt_date" placeholder=" " required/>
+						</td>
+					</tr>
+					<tr>
+						<td>
+						<label for="insurance_company_name">Insurance Company Name:</label><br>
+						<input type="text" name="InsuranceCompanyName" id="insurance_company_name" placeholder="Enter Insurance Company Name" required/>
+						</td>
+						<td>
+						<label for="policy_no">Policy No:</label><br>
+						<input type="text" name="PolicyNo" id="policy_no" placeholder="Enter Policy No" required/>
+						</td>
+						<td>
+						<label for="policyfrom">From:</label><br>
+						<input type="date" name="From" id="policyfrom" placeholder=" " required/>
+						</td>
+						<td>
+						<label for="policyto">To:</label><br>
+						<input type="date" name="To" id="policyto" placeholder=" " required/>
+						</td>
+					</tr>
+					<tr>
+						<td>
+						<label for="regional_permit_no">Regional Permit No:</label><br>
+						<input type="text" name="RegionalPermitNo" id="regional_permit_no" placeholder="Enter Regional Permit No" required/>
+						</td>
+						<td>
+						<label for="regionalpermitfrom">From:</label><br>
+						<input type="date" name="From" id="regionalpermitfrom" placeholder=" " required/>
+						</td>
+						<td>
+						<label for="regionalpermitto">To:</label><br>
+						<input type="date" name="To" id="regionalpermitto" placeholder=" " required/>
+						</td>
+						<td>
+						<label for="hp_cancelation">HP Cancelation:</label><br>
+						<input type="text" name="HpCancelation" id="hp_cancelation" placeholder=" " required/>
+						</td>
+					</tr>
+					<tr>
+						<td>
+						<label for="authorision_permit_no">Authorision Permit No:</label><br>
+						<input type="text" name="AuthorisionPermitNo" id="authorision_permit_no" placeholder="Enter Authorision Permit No" required/>
+						</td>
+						<td>
+						<label for="authorisionpermitfrom">From:</label><br>
+						<input type="date" name="From" id="authorisionpermitfrom" placeholder=" " required/>
+						</td>
+						<td>
+						<label for="authorisionpermitto">To:</label><br>
+						<input type="date" name="To" id="authorisionpermitto" placeholder=" " required/>
+						</td>
+						<!-- <td>
+						<label for="username">User Name*:</label><br>
+						<input type="text" name="UserName" id="username" placeholder="Enter User Name" required/>
+						</td> -->
+					</tr>
+					<tr>
+						<td>
+						<label for="fitness_from">Fitness From:</label><br>
+						<input type="date" name="FitnessFrom" id="fitness_from" placeholder="" required/>
+						</td>
+						<td>
+						<label for="fitness_to">Fitness To:</label><br>
+						<input type="date" name="FitnessTo" id="fitness_to" placeholder=" " required/>
+						</td>
+						<td>
+						<label for="puc_from">PUC From:</label><br>
+						<input type="date" name="PUCFrom" id="puc_from" placeholder=" " required/>
+						</td>
+						<td>
+						<label for="puc_to">PUC To:</label><br>
+						<input type="date" name="UserName" id="puc_to" placeholder=" " required/>
+						</td>
+					</tr>
+					<tr>
+						<td>
+						<label for="noc_from_state">NOC From State:</label><br>
+						<input type="text" name="NOCFromState" id="noc_from_state" placeholder=" " required/>
+						</td>
+						<td>
+						<label for="noc_from">NOC From:</label><br>
+						<input type="text" name="NOCFrom" id="noc_from" placeholder=" " required/>
+						</td>
+						<td>
+						<label for="noc_iss_to">NOC Iss To:</label><br>
+						<input type="text" name="NOCIssTo" id="noc_iss_to" placeholder=" " required/>
+						</td>
+						<td>
+						<label for="noc_to_state">NOC To State:</label><br>
+						<input type="text" name="NOCToState" id="noc_to_state" placeholder=" " required/>
+						</td>
+					</tr>
+					<tr>
+						<td>
+						<label for="professional_tax_from">Professional Tax From:</label><br>
+						<input type="date" name="ProfessionalTaxFrom" id="professional_tax_from" placeholder="" required/>
+						</td>
+						<td>
+						<label for="professional_tax_to">Professional Tax To:</label><br>
+						<input type="date" name="ProfessionalTaxTo" id="professional_tax_to" placeholder=" " required/>
+						</td>
+						<td>
+						<label for="rofessional_receipt_no">Receipt No:</label><br>
+						<input type="text" name="ProfessionalReceiptNo" id="rofessional_receipt_no" placeholder="Enter Receipt No" required/>
+						</td>
+						<td>
+						<label for="p_tax_receipt_date">P.Tax Receipt Date:</label><br>
+						<input type="date" name="PTaxReceiptDate" id="p_tax_receipt_date" placeholder=" " required/>
+						</td>
+						<td>
+						<label for="p_tax_amount">P.Tax Amount:</label><br>
+						<input type="text" name="PTaxAmount" id="p_tax_amount" placeholder="Enter P.Tax Amount" required/>
+						</td>
+					</tr>
+					<tr>
+						<td>
+						<label for="environmental_tax_from">Environmental Tax From:</label><br>
+						<input type="date" name="EnvironmentalTaxFrom" id="environmental_tax_from" placeholder="" required/>
+						</td>
+						<td>
+						<label for="environmental_tax_to">Environmental Tax To:</label><br>
+						<input type="date" name="EnvironmentalTaxTo" id="environmental_tax_to" placeholder=" " required/>
+						</td>
+						<td>
+						<label for="environmental_receipt_no">Receipt No:</label><br>
+						<input type="text" name="EnvironmentalReceiptNo" id="environmental_receipt_no" placeholder="Enter Receipt No" required/>
+						</td>
+						<td>
+						<label for="en_receipt_date">En.Receipt Date:</label><br>
+						<input type="date" name="EnReceiptDate" id="en_receipt_date" placeholder=" " required/>
+						</td>
+						<td>
+						<label for="en_tax_amount">En.Tax Amount:</label><br>
+						<input type="text" name="EnTaxAmount" id="en_tax_amount" placeholder="Enter En.Amount" required/>
+						</td>
+					</tr>
+				</table>	
+				<div class="actionbutton">
+					<button type="button" class="btn btn-success">Save</button>	
+					<button type="button" class="btn btn-primary">Update</button>
+					<button type="button" class="btn btn-danger">Cancel</button>
+				</div>	
+			</form>
+		</div>		
+	</div>	
+</body>
+</html>

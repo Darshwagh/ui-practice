@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Tab example in AngularJS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel='stylesheet prefetch' href='https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.css'>
+
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+  <div class="container" ng-app="tabApp">
+  <div class="row" ng-controller="TabController">
+  	<div class="col-md-2">
+  		<ul class="nav nav-pills nav-stacked">
+       	<li ng-class="{ active: isSet(1) }">
+          	<a href ng-click="setTab(1)">Home</a>
+       	</li>
+       	<li ng-class="{ active: isSet(2) }">
+          	<a href ng-click="setTab(2)">Profile</a>
+       	</li>
+       	<li ng-class="{ active: isSet(3) }">
+          	<a href ng-click="setTab(3)">Messages</a>
+       	</li>
+     	</ul>
+  	</div>
+    <div class="col-md-8">
+  		<div class="jumbotron">
+       	<div ng-show="isSet(1)">
+         	 <div class="col-sm-7">
+      <div class="panel panel-default">
+        <div class="panel-heading"><span class="lead">LMD of Report</span></div>
+          <div class=report-list>
+            <h5>Report:-
+            <select id="selected-report"  class="selectpicker">
+            </select> 
+            </h5>
+          </div>
+          <div class="showUrl">
+            <button id="btn-info" type="button" class="btn btn-info">Show  Url</button>
+          </div>
+          <div class="reportdownloads">
+            <a href="" id="mya" style="" class="btn btn-success">Download</a>
+          </div>
+        </div>
+      </div>
+    </div>
+        	</div>
+			<div ng-show="isSet(2)">
+          <h1>Profile page</h1>
+          <p>Profile information</p>
+     	</div>
+        <div ng-show="isSet(3)">
+          <h1>Messages</h1>
+          <p> Some messages </p>
+     	</div>
+  	</div>
+  </div>
+</div>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.10/angular.min.js'></script>
+
+    <script src="js/index.js"></script>
+
+</body>
+</html>

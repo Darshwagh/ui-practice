@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <title>CRM</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="CRM website">
+        <meta name="author" content="CRM">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+        <link href="css/crm.css" rel="stylesheet">
+        <script type="text/javascript" src="js/angular.min.js"></script>
+        <script type="text/javascript" src="js/crm.js"></script>     
+ </head>
+ <body ng-app="myModule"> 
+  <nav class="navbar navbar-default">
+<div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#"><img src="img/AgroStar.png" href="http://www.agrostar.in/"></a>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+         <li class="active"><a href="#">Farmer</a></li>
+         <li><a href="#">Product</a></li>
+         <li><a href="#">Search Order</a></li>
+     </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Prashant Wagh<i class="fa fa-user-circle fa-2x pull-right"; ;></i></a></li>
+      </ul>
+    </div>
+</div>
+</nav>
+<div class="container">
+<div class="col-sm-3">
+ <ul class="list-group">
+     <li class="list-group-item">Farmer Profile</li>
+     <li class="list-group-item active">Product</li>
+     <li class="list-group-item"  data-toggle="modal" data-target="#myModal">Farmer Logout</li>
+  </ul>
+<div class="filter">
+    <b>Filter</b>
+    <span style="color: #EBEEEE;">Clear all</span><br/>
+    <h6 style="color: #EBEEEE;">ALL CATEGORIES</h6>
+   <ul>
+        <li><input type="checkbox">Deal of  the Day Offer<span>20</span></li>
+        <li><input type="checkbox">All bounded Offer<span>239</span></li>
+        <li><input type="checkbox">Product on Offer<span>280</span></li>
+   </ul>
+   <b>Price Discounts</b>
+   <ul> <li style="color: red;">Under<i class="fa fa-inr"></i>200 Off<span>234</span></li>
+        <li><i class="fa fa-inr"></i>200-<i class="fa fa-inr"></i>500<span>36</span></li>
+        <li><i class="fa fa-inr"></i>500-<i class="fa fa-inr"></i>1000<span>12</span></li>
+        <li><i class="fa fa-inr"></i>1000-<i class="fa fa-inr"></i>5000<span>4</span></li>
+        <li><i class="fa fa-inr"></i>5000 and above<span>1</span></li>
+    </ul>
+    <b>Discount in Percentage</b>
+    <ul>
+        <li>10<i class="fa fa-percent fa-sm"></i>Off or More<span>360</span></li>
+        <li>25<i class="fa fa-percent"></i>Off or More<span>21</span></li>
+        <li>50<i class="fa fa-percent"></i>Off or More<span>12</span></li>
+        <li>70<i class="fa fa-percent"></i>Off or More<span>2</span></li>
+   </ul>
+   <b>Cash Back</b>   
+   <ul>
+        <li style="color: red;">Under<i class="fa fa-inr"></i>200<span>235</span></li>
+        <li> <i class="fa fa-inr"></i>500-<i class="fa fa-inr"></i>1000<span>180</span></li>
+        <li><i class="fa fa-inr"></i>1000-<i class="fa fa-inr"></i>2000<span>153</span></li>
+        <li><i class="fa fa-inr"></i>2000-<i class="fa fa-inr"></i>5000<span>132</span></li>
+        <li><i class="fa fa-inr"></i>5000 and above<span>12</span></li>      
+   </ul>
+    <input type="checkbox" aria-label="...">App Offer<span>301</span>
+</div>
+</div>
+<div class="col-sm-9">
+<div class="col-sm-9">
+      <h3>Nirmal Nilesh Shah</h3>
+      <h6>Via Suigam-Dhima - Dhima S.O -<br/>Tharad- Banaskantha Gujarat-385566<h6>
+</div>
+<div class="col-sm-3">
+ <button class="btn btn-success pull-right" type="button">
+        <i class="fa fa-shopping-cart pull-left" aria-hidden="true"></i>
+        <span class="pull-left">Checkout</span>
+        <span class="addon-success ng-binding">1</span>
+ </button>      
+</div>     
+<div class="col-sm-12">   
+  <div class="input-group">
+      <span class="input-group-btn">
+          <button class="btn btn-default" type="button">
+             <span class="glyphicon glyphicon-search"></span>
+          </button>
+      </span>
+      <input type="text" class="form-control" placeholder="Search for...">
+  </div>
+</div>
+<div class="col-xl-12">
+  <div class="custom-list ng-scope">
+    <ul class="list-header">
+      <li class="image-block">Image</li>
+      <li class="sku">SKU Code</li>
+      <li class="product">Product Name</li>
+      <li class="mrp">MRP</li>
+      <li class="s-price">Selling Price</li>
+      <li class="discount">Total Discount</li>
+      <li class="stock">In Stock</li>
+      <li class="qty">QTY</li>
+      <li class="add-to-cart">Add To Cart</li>
+    </ul>
+    <ul class="list-item ng-scope" ng-repat="">
+      <li class="image-block">
+        <img ng-src="img/AGS-CN-004_l.jpg" class="product-img" alt="product image" src="img/tomato.jpg" style="width:40px;margin-top:-10px">
+      </li>
+      <li class="SKU ng-binding">AGS-CN-004</li>
+      <li class="product">
+        <button class="small-link btn-link ng binding" ng-click="path">Power Gel-Plant Nutient(500ml)
+        </button>
+      </li>
+      <li class="mrp ng-binding">500</li>
+      <li class="s-price ng-binding">325</li>
+      <li class="discount ng-binding">35%
+        <span class="text-negative ng-binding">(-175)</span>
+      </li>
+      <li class="stock ng-bindung">97</li>
+      <li class="qty">
+        <cartquantity quantity="Product.quantity" cart="fproductctrl" increment-callback="fProductCtrl.UpdateProductOffer(Product)" decrement-callback="fProductCtrl.UpdateProductOffer(Product)" SKU="Product.SkuCode" class="ng-isolate-scope">
+          <div class="input-val" ng-class="divclass">
+            <button class="btn" ng-click="decrement()">
+              <i class="fa fa-angle-left" aria-hidden="true"></i>
+            </button>
+            <input type="text" class="form-control ng-pristine ng-untouched ng-valid" ng-model=
+            "quantity">
+             <button class="btn" ng-click="increment()">
+              <i class="fa fa-angle-right" aria-hidden="true"></i>
+          </div>
+        </cartquantity>
+      </li>
+      <li class="add-to-cart">
+        <button class="btn btn-add-cart active" ng-click="">
+          <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+        </button>
+      </li>
+    </ul>
+    <ul class="list-item ng-scope" ng-repat="">
+      <li class="image-block">
+        <img ng-src="img/AGS-CN-019_l.jpg" class="product-img" alt="product image" src="img/tomato.jpg" style="width:40px;margin-top:-15px">
+      </li>
+      <li class="SKU ng-binding">AGS-CN-019</li>
+      <li class="product">
+        <button class="small-link btn-link ng binding" ng-click="path">Super Sero(1kg)
+        </button>
+      </li>
+      <li class="mrp ng-binding">495</li>
+      <li class="s-price ng-binding">300</li>
+      <li class="discount ng-binding">39%
+        <span class="text-negative ng-binding">(-195)</span>
+      </li>
+      <li class="stock ng-bindung">0</li>
+      <li class="qty">
+        <cartquantity quantity="Product.quantity" cart="fproductctrl" increment-callback="fProductCtrl.UpdateProductOffer(Product)" decrement-callback="fProductCtrl.UpdateProductOffer(Product)" SKU="Product.SkuCode" class="ng-isolate-scope">
+          <div class="input-val" ng-class="divclass">
+            <button class="btn" ng-click="decrement()">
+              <i class="fa fa-angle-left" aria-hidden="true"></i>
+            </button>
+            <input type="text" class="form-control ng-pristine ng-untouched ng-valid" ng-model=
+            "quantity">
+             <button class="btn" ng-click="increment()">
+              <i class="fa fa-angle-right" aria-hidden="true"></i>
+          </div>
+        </cartquantity>
+      </li>
+      <li class="add-to-cart">
+        <button class="btn btn-add-cart active" ng-click="">
+          <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+        </button>
+      </li>
+    </ul>
+    <ul class="list-item ng-scope" ng-repat="">
+      <li class="image-block">
+        <img ng-src="img/AGS-CN-022_l.jpg" class="product-img" alt="product image" src="img/tomato.jpg" style="width:40px;margin-top:-10px">
+      </li>
+      <li class="SKU ng-binding">AGS-CN-022</li>
+      <li class="product">
+        <button class="small-link btn-link ng binding" ng-click="path">Kala Sona (250Gsm)
+        </button>
+      </li>
+      <li class="mrp ng-binding">500</li>
+      <li class="s-price ng-binding">175</li>
+      <li class="discount ng-binding">65%
+        <span class="text-negative ng-binding">(-325)</span>
+      </li>
+      <li class="stock ng-bindung">0</li>
+      <li class="qty">
+        <cartquantity quantity="Product.quantity" cart="fproductctrl" increment-callback="fProductCtrl.UpdateProductOffer(Product)" decrement-callback="fProductCtrl.UpdateProductOffer(Product)" SKU="Product.SkuCode" class="ng-isolate-scope">
+          <div class="input-val" ng-class="divclass">
+            <button class="btn" ng-click="decrement()">
+              <i class="fa fa-angle-left" aria-hidden="true"></i>
+            </button>
+            <input type="text" class="form-control ng-pristine ng-untouched ng-valid" ng-model=
+            "quantity">
+             <button class="btn" ng-click="increment()">
+              <i class="fa fa-angle-right" aria-hidden="true"></i>
+          </div>
+        </cartquantity>
+      </li>
+      <li class="add-to-cart">
+        <button class="btn btn-add-cart active" ng-click="">
+          <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+        </button>
+      </li>
+    </ul>
+    <ul class="list-item ng-scope" ng-repat="">
+      <li class="image-block">
+         <img ng-src="img/AGS-CN-025_l.jpg" class="product-img" alt="product image" src="img/tomato.jpg" style="width:40px;margin-top:-10px">
+      </li>
+      <li class="SKU ng-binding">AGS-CN-025</li>
+      <li class="product">
+        <button class="small-link btn-link ng binding" ng-click="path">Black Gold(250Gsm)
+        </button>
+      </li>
+      <li class="mrp ng-binding">700</li>
+      <li class="s-price ng-binding">350</li>
+      <li class="discount ng-binding">50%
+        <span class="text-negative ng-binding">(-350)</span>
+      </li>
+      <li class="stock ng-bindung">0</li>
+      <li class="qty">
+        <cartquantity quantity="Product.quantity" cart="fproductctrl" increment-callback="fProductCtrl.UpdateProductOffer(Product)" decrement-callback="fProductCtrl.UpdateProductOffer(Product)" SKU="Product.SkuCode" class="ng-isolate-scope">
+          <div class="input-val" ng-class="divclass">
+            <button class="btn" ng-click="decrement()">
+              <i class="fa fa-angle-left" aria-hidden="true"></i>
+            </button>
+            <input type="text" class="form-control ng-pristine ng-untouched ng-valid" ng-model=
+            "quantity">
+             <button class="btn" ng-click="increment()">
+              <i class="fa fa-angle-right" aria-hidden="true"></i>
+          </div>
+        </cartquantity>
+      </li>
+      <li class="add-to-cart">
+        <button class="btn btn-add-cart active" ng-click="">
+          <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+        </button>
+      </li>
+    </ul>
+    <ul class="list-item ng-scope" ng-repat="">
+      <li class="image-block">
+        <img ng-src="img/AGS-CN-029_l.jpg" class="product-img" alt="product image" src="img/tomato.jpg" style="width:40px;margin-top:-15px">
+      </li>
+      <li class="SKU ng-binding">AGS-CN-029</li>
+      <li class="product">
+        <button class="small-link btn-link ng binding" ng-click="path">Kala Moti(1Kg)
+        </button>
+      </li>
+      <li class="mrp ng-binding">350</li>
+      <li class="s-price ng-binding">310</li>
+      <li class="discount ng-binding">11%
+        <span class="text-negative ng-binding">(-40)</span>
+      </li>
+      <li class="stock ng-bindung">0</li>
+      <li class="qty">
+        <cartquantity quantity="Product.quantity" cart="fproductctrl" increment-callback="fProductCtrl.UpdateProductOffer(Product)" decrement-callback="fProductCtrl.UpdateProductOffer(Product)" SKU="Product.SkuCode" class="ng-isolate-scope">
+          <div class="input-val" ng-class="divclass">
+            <button class="btn" ng-click="decrement()">
+              <i class="fa fa-angle-left" aria-hidden="true"></i>
+            </button>
+            <input type="text" class="form-control ng-pristine ng-untouched ng-valid" ng-model=
+            "quantity">
+             <button class="btn" ng-click="increment()">
+              <i class="fa fa-angle-right" aria-hidden="true"></i>
+          </div>
+        </cartquantity>
+      </li>
+      <li class="add-to-cart">
+        <button class="btn btn-add-cart active" ng-click="">
+          <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+        </button>
+      </li>
+    </ul>
+    <ul class="list-item ng-scope" ng-repat="">
+      <li class="image-block">
+         <img ng-src="img/AGS-CN-030_l.jpg" class="product-img" alt="product image" src="img/tomato.jpg" style="width:40px;margin-top:-10px">
+      </li>
+      <li class="SKU ng-binding">AGS-CN-030</li>
+      <li class="product">
+        <button class="small-link btn-link ng binding" ng-click="path">Super Sona(250Gsm)
+        </button>
+      </li>
+      <li class="mrp ng-binding">400</li>
+      <li class="s-price ng-binding">300</li>
+      <li class="discount ng-binding">25%
+        <span class="text-negative ng-binding">(-100)</span>
+      </li>
+      <li class="stock ng-bindung">0</li>
+      <li class="qty">
+        <cartquantity quantity="Product.quantity" cart="fproductctrl" increment-callback="fProductCtrl.UpdateProductOffer(Product)" decrement-callback="fProductCtrl.UpdateProductOffer(Product)" SKU="Product.SkuCode" class="ng-isolate-scope">
+          <div class="input-val" ng-class="divclass">
+            <button class="btn" ng-click="decrement()">
+              <i class="fa fa-angle-left" aria-hidden="true"></i>
+            </button>
+            <input type="text" class="form-control ng-pristine ng-untouched ng-valid" ng-model=
+            "quantity">
+             <button class="btn" ng-click="increment()">
+              <i class="fa fa-angle-right" aria-hidden="true"></i>
+          </div>
+        </cartquantity>
+      </li>
+      <li class="add-to-cart">
+        <button class="btn btn-add-cart active" ng-click="">
+          <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+        </button>
+      </li>
+    </ul>
+    <ul class="list-item ng-scope" ng-repat="">
+      <li class="image-block">
+       <img ng-src="img/AGS-CN-031_l.jpg" class="product-img" alt="product image" src="img/tomato.jpg" style="width:40px;margin-top:-10px">
+      </li>
+      <li class="SKU ng-binding">AGS-CN-031</li>
+      <li class="product">
+        <button class="small-link btn-link ng binding" ng-click="path">BT Special Advance powder(500Gsm)
+        </button>
+      </li>
+      <li class="mrp ng-binding">300</li>
+      <li class="s-price ng-binding">305</li>
+      <li class="discount ng-binding">35%
+        <span class="text-negative ng-binding">(-45)</span>
+      </li>
+      <li class="stock ng-bindung">10</li>
+      <li class="qty">
+        <cartquantity quantity="Product.quantity" cart="fproductctrl" increment-callback="fProductCtrl.UpdateProductOffer(Product)" decrement-callback="fProductCtrl.UpdateProductOffer(Product)" SKU="Product.SkuCode" class="ng-isolate-scope">
+          <div class="input-val" ng-class="divclass">
+            <button class="btn" ng-click="decrement()">
+              <i class="fa fa-angle-left" aria-hidden="true"></i>
+            </button>
+            <input type="text" class="form-control ng-pristine ng-untouched ng-valid" ng-model=
+            "quantity">
+             <button class="btn" ng-click="increment()">
+              <i class="fa fa-angle-right" aria-hidden="true"></i>
+          </div>
+        </cartquantity>
+      </li>
+      <li class="add-to-cart">
+        <button class="btn btn-add-cart active" ng-click="">
+          <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+        </button>
+      </li>
+    </ul>
+    <ul class="list-item ng-scope" ng-repat="">
+      <li class="image-block">
+        <img ng-src="img/AGS-CN-004_l.jpg" class="product-img" alt="product image" src="img/tomato.jpg" style="width:40px;margin-top:-10px">
+      </li>
+      <li class="SKU ng-binding">AGS-CN-004</li>
+      <li class="product">
+        <button class="small-link btn-link ng binding" ng-click="path">Power Gel-Plant Nutient(500ml)
+        </button>
+      </li>
+      <li class="mrp ng-binding">500</li>
+      <li class="s-price ng-binding">325</li>
+      <li class="discount ng-binding">35%
+        <span class="text-negative ng-binding">(-175)</span>
+      </li>
+      <li class="stock ng-bindung">97</li>
+      <li class="qty">
+        <cartquantity quantity="Product.quantity" cart="fproductctrl" increment-callback="fProductCtrl.UpdateProductOffer(Product)" decrement-callback="fProductCtrl.UpdateProductOffer(Product)" SKU="Product.SkuCode" class="ng-isolate-scope">
+          <div class="input-val" ng-class="divclass">
+            <button class="btn" ng-click="decrement()">
+              <i class="fa fa-angle-left" aria-hidden="true"></i>
+            </button>
+            <input type="text" class="form-control ng-pristine ng-untouched ng-valid" ng-model=
+            "quantity">
+             <button class="btn" ng-click="increment()">
+              <i class="fa fa-angle-right" aria-hidden="true"></i>
+          </div>
+        </cartquantity>
+      </li>
+      <li class="add-to-cart">
+        <button class="btn btn-add-cart active" ng-click="">
+          <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+        </button>
+      </li>
+    </ul>
+    <ul class="list-item ng-scope" ng-repat="">
+      <li class="image-block">
+        <img ng-src="img/AGS-CN-019_l.jpg" class="product-img" alt="product image" src="img/tomato.jpg" style="width:40px;margin-top:-15px">
+      </li>
+      <li class="SKU ng-binding">AGS-CN-019</li>
+      <li class="product">
+        <button class="small-link btn-link ng binding" ng-click="path">Super Sero(1kg)
+        </button>
+      </li>
+      <li class="mrp ng-binding">495</li>
+      <li class="s-price ng-binding">300</li>
+      <li class="discount ng-binding">39%
+        <span class="text-negative ng-binding">(-195)</span>
+      </li>
+      <li class="stock ng-bindung">0</li>
+      <li class="qty">
+        <cartquantity quantity="Product.quantity" cart="fproductctrl" increment-callback="fProductCtrl.UpdateProductOffer(Product)" decrement-callback="fProductCtrl.UpdateProductOffer(Product)" SKU="Product.SkuCode" class="ng-isolate-scope">
+          <div class="input-val" ng-class="divclass">
+            <button class="btn" ng-click="decrement()">
+              <i class="fa fa-angle-left" aria-hidden="true"></i>
+            </button>
+            <input type="text" class="form-control ng-pristine ng-untouched ng-valid" ng-model=
+            "quantity">
+             <button class="btn" ng-click="increment()">
+              <i class="fa fa-angle-right" aria-hidden="true"></i>
+          </div>
+        </cartquantity>
+      </li>
+      <li class="add-to-cart">
+        <button class="btn btn-add-cart active" ng-click="">
+          <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+        </button>
+      </li>
+    </ul>
+    <ul class="list-item ng-scope" ng-repat="">
+      <li class="image-block">
+        <img ng-src="img/AGS-CN-022_l.jpg" class="product-img" alt="product image" src="img/tomato.jpg" style="width:40px;margin-top:-10px">
+      </li>
+      <li class="SKU ng-binding">AGS-CN-022</li>
+      <li class="product">
+        <button class="small-link btn-link ng binding" ng-click="path">Kala Sona (250Gsm)
+        </button>
+      </li>
+      <li class="mrp ng-binding">500</li>
+      <li class="s-price ng-binding">175</li>
+      <li class="discount ng-binding">65%
+        <span class="text-negative ng-binding">(-325)</span>
+      </li>
+      <li class="stock ng-bindung">0</li>
+      <li class="qty">
+        <cartquantity quantity="Product.quantity" cart="fproductctrl" increment-callback="fProductCtrl.UpdateProductOffer(Product)" decrement-callback="fProductCtrl.UpdateProductOffer(Product)" SKU="Product.SkuCode" class="ng-isolate-scope">
+          <div class="input-val" ng-class="divclass">
+            <button class="btn" ng-click="decrement()">
+              <i class="fa fa-angle-left" aria-hidden="true"></i>
+            </button>
+            <input type="text" class="form-control ng-pristine ng-untouched ng-valid" ng-model=
+            "quantity">
+             <button class="btn" ng-click="increment()">
+              <i class="fa fa-angle-right" aria-hidden="true"></i>
+          </div>
+        </cartquantity>
+      </li>
+      <li class="add-to-cart">
+        <button class="btn btn-add-cart active" ng-click="">
+          <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+        </button>
+      </li>
+    </ul>
+    <ul class="list-item ng-scope" ng-repat="">
+      <li class="image-block">
+         <img ng-src="img/AGS-CN-025_l.jpg" class="product-img" alt="product image" src="img/tomato.jpg" style="width:40px;margin-top:-10px">
+      </li>
+      <li class="SKU ng-binding">AGS-CN-025</li>
+      <li class="product">
+        <button class="small-link btn-link ng binding" ng-click="path">Black Gold(250Gsm)
+        </button>
+      </li>
+      <li class="mrp ng-binding">700</li>
+      <li class="s-price ng-binding">350</li>
+      <li class="discount ng-binding">50%
+        <span class="text-negative ng-binding">(-350)</span>
+      </li>
+      <li class="stock ng-bindung">0</li>
+      <li class="qty">
+        <cartquantity quantity="Product.quantity" cart="fproductctrl" increment-callback="fProductCtrl.UpdateProductOffer(Product)" decrement-callback="fProductCtrl.UpdateProductOffer(Product)" SKU="Product.SkuCode" class="ng-isolate-scope">
+          <div class="input-val" ng-class="divclass">
+            <button class="btn" ng-click="decrement()">
+              <i class="fa fa-angle-left" aria-hidden="true"></i>
+            </button>
+            <input type="text" class="form-control ng-pristine ng-untouched ng-valid" ng-model=
+            "quantity">
+             <button class="btn" ng-click="increment()">
+              <i class="fa fa-angle-right" aria-hidden="true"></i>
+          </div>
+        </cartquantity>
+      </li>
+      <li class="add-to-cart">
+        <button class="btn btn-add-cart active" ng-click="">
+          <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+        </button>
+      </li>
+    </ul>
+    <ul class="list-item ng-scope" ng-repat="">
+      <li class="image-block">
+        <img ng-src="img/AGS-CN-029_l.jpg" class="product-img" alt="product image" src="img/tomato.jpg" style="width:40px;margin-top:-15px">
+      </li>
+      <li class="SKU ng-binding">AGS-CN-029</li>
+      <li class="product">
+        <button class="small-link btn-link ng binding" ng-click="path">Kala Moti(1Kg)
+        </button>
+      </li>
+      <li class="mrp ng-binding">350</li>
+      <li class="s-price ng-binding">310</li>
+      <li class="discount ng-binding">11%
+        <span class="text-negative ng-binding">(-40)</span>
+      </li>
+      <li class="stock ng-bindung">0</li>
+      <li class="qty">
+        <cartquantity quantity="Product.quantity" cart="fproductctrl" increment-callback="fProductCtrl.UpdateProductOffer(Product)" decrement-callback="fProductCtrl.UpdateProductOffer(Product)" SKU="Product.SkuCode" class="ng-isolate-scope">
+          <div class="input-val" ng-class="divclass">
+            <button class="btn" ng-click="decrement()">
+              <i class="fa fa-angle-left" aria-hidden="true"></i>
+            </button>
+            <input type="text" class="form-control ng-pristine ng-untouched ng-valid" ng-model=
+            "quantity">
+             <button class="btn" ng-click="increment()">
+              <i class="fa fa-angle-right" aria-hidden="true"></i>
+          </div>
+        </cartquantity>
+      </li>
+      <li class="add-to-cart">
+        <button class="btn btn-add-cart active" ng-click="">
+          <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+        </button>
+      </li>
+    </ul>
+    <ul class="list-item ng-scope" ng-repat="">
+      <li class="image-block">
+         <img ng-src="img/AGS-CN-030_l.jpg" class="product-img" alt="product image" src="img/tomato.jpg" style="width:40px;margin-top:-10px">
+      </li>
+      <li class="SKU ng-binding">AGS-CN-030</li>
+      <li class="product">
+        <button class="small-link btn-link ng binding" ng-click="path">Super Sona(250Gsm)
+        </button>
+      </li>
+      <li class="mrp ng-binding">400</li>
+      <li class="s-price ng-binding">300</li>
+      <li class="discount ng-binding">25%
+        <span class="text-negative ng-binding">(-100)</span>
+      </li>
+      <li class="stock ng-bindung">0</li>
+      <li class="qty">
+        <cartquantity quantity="Product.quantity" cart="fproductctrl" increment-callback="fProductCtrl.UpdateProductOffer(Product)" decrement-callback="fProductCtrl.UpdateProductOffer(Product)" SKU="Product.SkuCode" class="ng-isolate-scope">
+          <div class="input-val" ng-class="divclass">
+            <button class="btn" ng-click="decrement()">
+              <i class="fa fa-angle-left" aria-hidden="true"></i>
+            </button>
+            <input type="text" class="form-control ng-pristine ng-untouched ng-valid" ng-model=
+            "quantity">
+             <button class="btn" ng-click="increment()">
+              <i class="fa fa-angle-right" aria-hidden="true"></i>
+          </div>
+        </cartquantity>
+      </li>
+      <li class="add-to-cart">
+        <button class="btn btn-add-cart active" ng-click="">
+          <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+        </button>
+      </li>
+    </ul>
+    <ul class="list-item ng-scope" ng-repat="">
+      <li class="image-block">
+       <img ng-src="img/AGS-CN-031_l.jpg" class="product-img" alt="product image" src="img/tomato.jpg" style="width:40px;margin-top:-10px">
+      </li>
+      <li class="SKU ng-binding">AGS-CN-031</li>
+      <li class="product">
+        <button class="small-link btn-link ng binding" ng-click="path">BT Special Advance powder(500Gsm)
+        </button>
+      </li>
+      <li class="mrp ng-binding">300</li>
+      <li class="s-price ng-binding">305</li>
+      <li class="discount ng-binding">35%
+        <span class="text-negative ng-binding">(-45)</span>
+      </li>
+      <li class="stock ng-bindung">10</li>
+      <li class="qty">
+        <cartquantity quantity="Product.quantity" cart="fproductctrl" increment-callback="fProductCtrl.UpdateProductOffer(Product)" decrement-callback="fProductCtrl.UpdateProductOffer(Product)" SKU="Product.SkuCode" class="ng-isolate-scope">
+          <div class="input-val" ng-class="divclass">
+            <button class="btn" ng-click="decrement()">
+              <i class="fa fa-angle-left" aria-hidden="true"></i>
+            </button>
+            <input type="text" class="form-control ng-pristine ng-untouched ng-valid" ng-model=
+            "quantity">
+             <button class="btn" ng-click="increment()">
+              <i class="fa fa-angle-right" aria-hidden="true"></i>
+          </div>
+        </cartquantity>
+      </li>
+      <li class="add-to-cart">
+        <button class="btn btn-add-cart active" ng-click="">
+          <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+        </button>
+      </li>
+    </ul>
+</div>
+</div>
+</div>
+</div>   
+</div>
+</div>
+</div>
+</body>
+</html>

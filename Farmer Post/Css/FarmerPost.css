@@ -1,0 +1,54 @@
+body
+{
+background-color: rgb(223, 217, 217);
+}
+.farmerpost
+{
+    width: 100%;
+    height: 500px;
+
+}
+.post-list
+{
+ list-style-type: none;
+}
+.post-list li
+{
+    background-color: #ffffff;
+   border-radius: 5px;
+   padding-left: 5px;
+   padding-right: 5px;
+}
+.farmerUploadimg
+{
+    width: 100%;
+    height: 500px;
+}
+.fa-heart
+{
+    color: red;
+}
+h4
+{
+color: red;
+}
+h4 small b
+{
+    color: rgb(155, 27, 27);
+}
+h5
+{
+    color: red;
+}
+h5 small b
+{
+    color: green;
+}
+.select-state
+{
+    margin-left: 40px;
+}
+.post-date
+{
+    float: right;
+}

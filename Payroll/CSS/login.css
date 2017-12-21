@@ -1,0 +1,21 @@
+
+td {
+    padding-right:30px;
+    padding-bottom: 10px;
+}
+ .actionbutton
+ {
+  margin-top: 20px;
+  float: right;
+  margin-right: 100px;
+ }
+ .actionbutton button
+ {
+  margin-left: 15px;
+ }
+ textarea
+ {
+      margin: 0px;
+    width: 181px;
+    height: 140px;
+ }

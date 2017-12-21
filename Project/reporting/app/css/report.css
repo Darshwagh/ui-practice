@@ -1,0 +1,73 @@
+
+img
+{
+    margin-top:1%;
+}
+
+.sidebar-nav .navbar .navbar-collapse 
+{
+    padding: 0;
+    max-height: none;
+}
+.sidebar-nav .navbar ul 
+{
+    float: none;
+    display: block;
+}
+.sidebar-nav .navbar li
+{
+    float: none;
+    display: block;
+}
+.sidebar-nav .navbar li a 
+{
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+.col-sm-7
+{
+	margin-left: 0px;
+}
+.btn-success 
+{
+    margin-top: -60px;
+    margin-left: 250px;
+}
+.btn-info
+{
+    margin-top: 100px;
+    margin-left: 150px;
+}
+
+.dropdown-menu>li>a 
+{
+    padding: 3px 50px;
+}
+
+footer 
+{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color:  #f2f2f2; 
+    height: 50px;
+}
+.nav-pills > li.active > a
+{
+	background-color:#b73345;
+}
+.nav-pills > li.active > a:hover
+{
+	background-color: #eee;
+   
+}
+.btn-danger 
+{
+	height: 34px;
+	width: 45px;
+}
+.form-inline 
+{
+      padding: 0 0 0 14px;
+}

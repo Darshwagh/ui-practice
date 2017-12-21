@@ -1,0 +1,86 @@
+
+img
+{
+    margin-top:2%;
+}
+
+.sidebar-nav .navbar .navbar-collapse 
+{
+    padding: 0;
+    max-height: none;
+}
+.sidebar-nav .navbar ul 
+{
+    float: none;
+    display: block;
+}
+.sidebar-nav .navbar li
+{
+    float: none;
+    display: block;
+}
+.sidebar-nav .navbar li a 
+{
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+.col-sm-7
+{
+	margin-left: 0px;
+}
+.btn-success 
+{
+    margin-top: -60px;
+    margin-left: 250px;
+}
+.btn-info
+{
+    margin-top: 100px;
+    margin-left: 150px;
+}
+
+.dropdown-menu>li>a 
+{
+    padding: 3px 50px;
+}
+
+footer 
+{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color:  #f2f2f2; 
+    height: 50px;
+}
+.nav-pills > li.active > a
+{
+	background-color:#b73345;
+}
+.nav-pills > li.active > a:hover
+{
+	background-color: #eee;
+   
+}
+.ui-state-active, .ui-widget-content .ui-state-active, 
+.ui-widget-header .ui-state-active, a.ui-button:active, 
+.ui-button:active, .ui-button.ui-state-active:hover {
+    border: 1px solid #003eff;
+    background:#f6f6f6;
+    font-weight: normal;
+    color: #902830;
+}
+.ui-state-active a, .ui-state-active a:link, .ui-state-active a:visited
+ {
+    color: #902830;
+}
+button
+{
+   color: white;
+   background-color: #73D04B;
+}
+h5
+{
+    padding: 16px 5px 5px 5px;
+    color: #39FF60;
+}

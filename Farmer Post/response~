@@ -1,0 +1,15 @@
+Name:-{{Post.author.name}}   
+Comment:-{{Post.comments_count}}
+<h1>{{Post.data[0].type}}</h1>
+<h1>{{Post.data[0].value}}</h1> 
+
+
+Task
+
+1. Date for posts
+2. pagination
+3. state filter
+
+4.Date filter
+     createdOnGt=156000000000
+     createdOnLt=343243243243

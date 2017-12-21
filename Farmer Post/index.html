@@ -1,0 +1,66 @@
+<html ng-app='getserviceApp'>
+    <head>  
+            <title>Farmer Post</title>
+            <meta charset="utf-8">  
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+            <link rel="stylesheet" href="Css/FarmerPost.css">
+            <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+            <script src="lib/angular/angular.min.js"></script>
+            <script type="text/javascript" src="JavaScript/FarmerPost.js"></script>
+            <script src="lib/dirPagination.js"></script>
+    </head>
+    <body ng-controller="FarmerPostCtrl">
+        <div class="container-row">
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                    <a class="navbar-img" href="http://www.agrostar.in/"><img src="img/agrostar.png"></a>
+                    </div>
+                </div>
+            </nav>
+        <div class="col-md-2" class="col-xs-0" class="col-sm-3">
+        </div>
+        <div class="col-md-8" class="col-xs-12" class="col-sm-6">
+            <div class="farmerpost">
+                    <span class="select-state">Select State:-
+                        <select  ng-model="select_state">
+                            <option value=""> All</option>
+                            <option value="maharashtra">Maharashtra</option>
+                            <option value="rajasthan">Rajasthan</option>
+                            <option value="gujarat">Gujarat</option>
+                        </select>
+                    </span>
+                <ul class="post-list">
+                    <li dir-paginate="post in Posts | itemsPerPage:3 | filter:select_state ">
+                        <div class="farmername"> 
+                            <span>
+                         <h4>Name:-<small><b> {{post.author.name}}</b></small></h4></span>
+                         <span class="post-date"><h5>{{post.client_epoch | date:'medium'}}</h5></span>
+                        </div>                              
+                        <!-- {{post.author.location.state}}          -->
+                        <div ng-repeat="data in post.data">
+                            <div class="show-image" ng-if="data.type=='image'">
+                                <img ng-src={{data.value}} class="farmerUploadimg"></img>
+                            </div>
+                            <div class="farmer-post" ng-if="data.type=='text'">
+                                <h5>Post:-<small><b>{{data.value}}</b></small></h5>
+                            </div>
+                        </div>
+                        <div class="farmer-comments-count">
+                        <i class="fa fa-heart" aria-hidden="true"> </i>&nbsp<b>{{post.comments_count}}&nbsplikes</b>
+                      </div>
+                    </li>
+                </ul> 
+                <dir-pagination-controls
+                 max-size="3"
+                 direction-links="true"
+                 boundary-links="true" >
+                </dir-pagination-controls>
+            </div>    
+        </div>
+        <div class="col-md-2" class="col-xs-0"class="col-sm-3">                      
+        </div>    
+        </div>
+    </body>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+</html>

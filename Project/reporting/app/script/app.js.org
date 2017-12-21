@@ -1,0 +1,56 @@
+var report = [
+               {reportName:"Deposit History", reportUrl:"http://agroex.agrostar.in/report/deposit_history.csv"},
+               {reportName:"AllPackagesReport", reportUrl:"http://agroex.agrostar.in/report/AllPackagesReport.csv"},
+               {reportName:"Incentive Report", reportUrl:"http://agroex.agrostar.in/report/AllPackagesReport.csv"},
+               {reportName:"Incentive Snapshot", reportUrl:"http://agroex.agrostar.in/report/incentive_snapshot.csv"},
+               {reportName:"Quickcash Snapshot", reportUrl:"http://agroex.agrostar.in/report/quickcash_snapshot.csv"},
+               {reportName:"Returnpackage Report", reportUrl:"http://agroex.agrostar.in/report/returnpackage-report.csv"},
+               {reportName:"Report/Vpm Report", reportUrl:"http://agroex.agrostar.in/report/vpm_report.csv"},
+             ];
+var rLen=report.length;            
+var reportOption="<option value='0'>selcet</option>";
+     for (i = 0; i <rLen; i++) {
+	     reportOption+="<option value='"+report[i]['reportUrl']+"'>"+report[i]['reportName']+"</option>"
+	     };
+document.getElementById("selected-report").innerHTML = reportOption;
+
+$(document).ready(function(){
+	//alert("hi");
+    $('#btn-download').click(function(){
+       // alert("The paragraph was clicked.");
+// $('#btn-download')
+
+var url = $( "#selected-report option:selected" ).val();
+// alert(url);
+downloadURL(url);
+// alert(url);
+
+    });
+
+$('#selected-report').change(function () {
+     var optionSelected = $(this).find("option:selected");
+     var valueSelected  = optionSelected.val();
+     var textSelected   = optionSelected.text();
+alert(valueSelected);
+     $('#mya').attr('href',valueSelected);
+ });
+
+
+
+});
+
+
+function downloadURL(url) {
+	alert(url);
+     var hiddenIFrameID = 'hiddenDownloader',
+    //     iframe = document.getElementById(hiddenIFrameID);
+    // if (iframe === null) {
+    //     iframe = document.createElement('iframe');
+    //     iframe.id = hiddenIFrameID;
+    //     iframe.style.display = 'none';
+    //     document.body.appendChild(iframe);
+    // }
+    iframe = document.getElementById('#myiframe');
+    iframe === null;
+    iframe.src = url;
+};

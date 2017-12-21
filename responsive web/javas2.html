@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link href="java2.css" rel="stylesheet" type="text/css">
+	<script type="text/javascript">
+	    var Total=0;
+	    {
+		function Adda()
+		{
+			    var node=document.createTextNode("A");
+				var para = document.getElementById("Item");
+				para.appendChild(node);
+				var total=Total+500;
+				document.getElementById("Total").innerHTML="Total:-"+total;
+		}
+		
+		
+		function Addb()
+		{
+			    var node=document.createTextNode("B");
+				var para = document.getElementById("Item");
+				para.appendChild(node);
+				var total=Total+600;
+				document.getElementById("Total").innerHTML="Total:-"+total;
+		}
+		
+		function Addc()
+		{
+			    var node=document.createTextNode("C");
+				var para = document.getElementById("Item");
+				para.appendChild(node);
+				var total=Total+700;
+				document.getElementById("Total").innerHTML="Total:-"+total;
+		}
+	}
+	</script>
+</head>
+<body>
+	<div id="A">
+		<div id="a" onclick="Adda()">
+			<h1>A</h1>
+		</div>
+		<div id="amountA">Rs 500/-</div>
+	</div>
+
+	<div id="B">
+		<div id="b" onclick="Addb()">
+			<h1>B</h1>
+		</div>
+		<div id="amountA">Rs 600/-</div>
+	</div>
+	
+	<div id="C">
+		<div id="c" onclick="Addc()">
+			<h1>C</h1>
+		</div>
+		<div id="amountA">Rs 700/-</div>
+	</div>
+
+	<form>
+		<p id="Item">Item:-</p>
+		<p id="Total">Total:-</p>
+	</form>
+	
+</body>
+</html>

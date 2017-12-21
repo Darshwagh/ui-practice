@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html ng-app="getserviceApp">
+	<head>
+		<title>User images post </title>
+	    <meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+	    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
+	    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap-theme.min.css">
+	    <!-- <link rel="stylesheet" href="lib/jquery-ui/jquery-ui.css"> -->
+		<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+	    <link rel="stylesheet" href="css/displayimage.css">
+	    <script src="lib/angular/angular.min.js"></script>
+	    <<!-- script src="lib/jquery/dist/jquery.js"></script>
+	    <script src="lib/jquery-ui/jquery-ui.js"></script>
+	    <script src="lib/jquery/dist/jquery.min.js"></script> -->
+	    <script type="text/javascript" src="lib/bootstrap/js/bootstrap.min.js"></script> 
+	    <script src="lib/dirPagination.js"></script>
+	    <!-- <script src="lib/ui-bootstrap-tpls-2.5.0.min.js"></script> -->
+	    </head>
+	</head>
+  	<body ng-controller="imgdisplayCtrl">
+		<nav class="navbar navbar-default">
+		    <div class="container-fluid">
+		  	    <div class="row">
+		  			<div class="col-xs-12 col-sm-12 col-md-12">
+			      		<a class="navbar-camera" href="#">	
+			        		<i class="fa fa-camera fa-3x"></i>
+			            </a>
+			         	<form class="form-inline">
+		    				<input class="form-control mr-sm-2" type="text" placeholder="Search" ng-model="query">
+		    				<button class="btn btn-outline-success my-2 my-sm-0" type="submit" ng-click="search()">Search</button>
+   		 				</form>
+   		 				<ul class="nav navbar-nav navbar-right">
+				            <li>
+				            	<a href="https://www.facebook.com">
+				            		<i class="fa fa-facebook fa-2x" aria-hidden="true"></i>
+				          		</a>	
+				          	</li>
+				            <li>
+				            	<a href="https://twitter.com/login" >
+				            		<i class="fa fa-twitter fa-2x" aria-hidden="true" ></i>
+                                </a>
+		            		</li>
+				            <li>
+				            	<a href="#" >
+				            		<i class="fa fa-user fa-2x" aria-hidden="true"></i>
+				            	</a>	
+				            </li>
+				        </ul>
+				    </div>
+			    </div>
+			</div>
+		</nav>
+  	<div class="container-fluid">
+		<div class="row">	
+		    <div class="col-sm-3">	
+		    </div>
+		    <div class="col-sm-6">
+		    	<span><input ng-model="query.photo.updated_at" type="date"  placeholder="Select Date From" />To<input ng-model="query.photo.updated_at" type="date" placeholder="Select Date To" /></span>
+			    <ul class="image-list">
+				    <li dir-paginate="photo in photos |itemsPerPage:3 |filter:query">
+				         	<div class="panel-heading">
+				         	<img ng-src={{photo.user.profile_image.small}} class="img-circle"></img>
+				            	<span>
+				            		{{photo.user.username}}
+				            	</span>
+				            	<span class="upload-date">
+				            		<!-- {{photo.updated_at | date : 'dd/MM/yyyy'}} -->
+				            		{{photo.updated_at| date:'dd/MM/yyyy'}}
+				            	</span>
+				            </div>
+				          	<div class="show-image">
+				          	<img ng-src={{photo.urls.thumb}} class="upload-img"></img>
+				          	<div class="image-like">
+				          		<i class="fa fa-heart" aria-hidden="true"> </i>&nbsp<b>{{photo.likes}}&nbsplikes</b>
+				          	</div>
+				          	</div>
+				      	</div>
+				    </li>
+			    </ul> 
+			    <dir-pagination-controls
+        			max-size="3"
+                    direction-links="true"
+                    boundary-links="true" >
+                </dir-pagination-controls>
+		    </div> 
+		    
+	        </div>
+	    <div class="col-sm-3"> 	
+	    </div>
+	</div>
+	</div>
+	<script src="script/displayimage.js"></script>
+	</body>
+</html>

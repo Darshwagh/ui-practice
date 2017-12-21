@@ -1,0 +1,78 @@
+.navbar
+	{
+		background-color: #e3f2fd;
+	}
+.fa-camera
+	{
+		margin-left: 150px;
+		color: black;	
+	}
+.fa-twitter
+{
+	color: #64abfc;
+}
+.fa-facebook
+{
+	color: blue;
+}
+.form-inline
+	{
+		margin-top: 25px;
+	}
+.container-fluid
+	{
+		margin-bottom: 25px;
+		/*display: -webkit-flex;
+  		display: flex;*/
+
+	}
+.upload-date
+	{
+		float: right;
+	}
+.fa-heart
+	{
+		color: red;
+	}
+.image-like
+	{
+		margin-top: 10px;
+		margin-left: 10px;
+	}
+.image-list
+	{
+		list-style-type: none;
+	}
+.navbar-camera
+ {
+    float: left;
+    height: 50px;
+    padding: 15px 15px;
+    font-size: 18px;
+    line-height: 20px;
+}
+.upload-img
+{
+	height: 100%;
+	width: 100%;
+}
+.img-circle
+{
+	height: 30px;
+	width: 30	px;	
+}.form-control
+{
+	width:100px;
+}
+.navbar-right
+{
+margin-top: -42px;
+}
+.pagination
+{
+	margin-left: 42%;
+}
+b
+{
+	margin-top: 10px;
+}

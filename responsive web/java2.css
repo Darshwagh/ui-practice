@@ -1,0 +1,40 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+#A
+{
+	width: 100px;
+	height:100px;
+	background-color: red;
+	float: left;
+	margin-left: 10px;
+	text-align: center;
+	line-height:100px;
+}
+#B
+{
+	width: 100px;
+	height: 100px;
+	background-color: green;
+	float: left;
+	margin-left: 10px;
+	text-align: center;
+	line-height:100px;
+}
+#C
+{
+	width: 100px;
+	height: 100px;
+	background-color: blue;
+	float: left;
+	margin-left: 10px;
+    text-align:center;
+	line-height:100px;
+}
+form
+{
+	position: absolute;
+	top: 200px;
+	left: 10px;
+}

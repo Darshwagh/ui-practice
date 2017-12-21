@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>support to farmer</title>
+  <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+      <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="lib/jquery-ui/jquery-ui.css">
+  <!-- <link rel="stylesheet" href="/resources/demos/style.css"> -->
+  <script src="lib/jquery/dist/jquery.js"></script>
+  <script src="lib/jquery-ui/jquery-ui.js"></script>
+  <script src="lib/angular/angular.min.js"></script>
+   <script src="lib/angular/angular.js"></script>
+  <script type="text/javascript" src="lib/bootstrap/js/bootstrap.min.js"></script> 
+  <link rel="stylesheet" href="css/record.css">
+  <script>
+  $( function() {
+    $( "#tabs" ).tabs({
+    });
+  } );
+  </script>
+</head>
+<body ng-app="myModule">
+ <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-img" href="http://www.agrostar.in/"><img src="img/agrostar.png"></a>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+           
+            <li><h5>Customer Complaint Portal</h5></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true" >Prashant Wagh<i class="fa fa-user-circle fa-2x pull-right"; ;></i></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">LogOut</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container" >
+      <div id="tabs" ng-controller="myController">
+        <ul>
+          <li><a href="#tabs-1">Pending Quiries</a></li>
+          <!-- <li><a href="#tabs-2" >Addressed Quiries</a></li> -->
+        </ul>
+      <div id="tabs-1">
+      <span>List Of Item:-
+                <select  ng-model="limit">
+                  <option>2</option>
+                  <option>3</option>
+                  <option>5</option>
+                  <option>10</option>
+                  <option>11</option>
+                </select>
+              </span>
+      <div class="panel panel-default">  
+        <div class="panel-heading">
+          <span class="lead">List of Records </span></div>
+        <div class="tablecontainer">
+          <table class="table table-hover" id="table">
+            <thead>
+              <tr>
+                <th>Sr.No</th>
+                <th>Phone No.</th>
+                <th>Call Time</th>
+                 <th>Call For</th>
+                <!-- <th>Recording</th> -->
+                <th>Call</th>
+                <th>Call Addressed</th>
+              </tr>
+            </thead>
+            <tbody>
+           <!--  {{recordings}} -->
+              <tr ng-repeat="recording in recordings |limitTo:limit">
+                <td>{{recording.uniqueid}}</td>
+              <td>{{recording.caller_id}}</td>
+              <td>{{recording.start_time| date:'yyyy-mm-dd hh:mm:ss Z'}}</td>
+              <td>{{recording.comment_b}}</td>  
+               
+                <td>
+                  <button type="button" ng-click="recording.Show=false;myFunc(recording.caller_id)"><a><i class="fa fa-phone" aria-hidden="true" ng-disable="true"></i></a></button>
+                 
+                </td>
+                <td>
+                  <button type="button" id="" ng-click="removeRow($index)"  class="btn btn1-success" ng-disabled="recording.Show">Done</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      </div>
+  </div>
+ </div>
+ <script type="text/javascript" src="script/record.js"></script>
+</body>
+</html>

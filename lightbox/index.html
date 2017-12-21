@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<link href="CSS/index.css" rel="stylesheet" type="text/css" />
+
+<script>
+var x=1;
+	function display1(){
+		document.getElementById("transblack").className="show";
+		document.getElementById("bigdisplay").className="image1";
+		document.getElementById("leftarrow").className="hide";
+
+	}
+	function display2(){
+		document.getElementById("transblack").className="show";
+		document.getElementById("bigdisplay").className="image2";
+				
+	}
+	function display3(){
+		document.getElementById("transblack").className="show";
+		document.getElementById("bigdisplay").className="image3";
+				
+	}
+
+	
+		function hideagain(){
+		document.getElementById("transblack").className="hide";
+		document.getElementById("bigdisplay").className="hide";	
+	}
+	
+	function next(){
+		document.getElementById("leftarrow").className="show";
+		if(x==1){
+				document.getElementById("bigdisplay").className="image2";
+				x=x+1;
+		}else
+		if(x==2){
+			document.getElementById("bigdisplay").className="image3";
+			document.getElementById("rightarrow").className="hide";
+			x=x+1;		
+		}
+			
+	}
+	function previous(){
+		
+		if(x==1){
+				document.getElementById("bigdisplay").className="image2";
+				x=x+1;
+		}else
+		if(x==2){
+			document.getElementById("bigdisplay").className="image1";
+			document.getElementById("leftarrow").className="hide";
+			x=x+1;	
+		}
+			
+	}
+</script>
+</head>
+
+<body>
+	<div id="gallery">
+    	<div id="a" class="image1" onclick="display1()"></div>
+        <div id="b" class="image2" onclick="display2()"></div>
+        <div id="c" class="image3" onclick="display3()"></div>
+    </div>
+    <div id="transblack" class="hide"></div>
+    <div id="bigdisplay" class="hide">
+    	<p id="leftarrow" onclick="previous()">  <  </p>
+        <p id="rightarrow" onclick="next()">  >  </p>
+        <div id="closebutton" onclick="hideagain()">X</div>
+    </div>
+</body>
+</html>
